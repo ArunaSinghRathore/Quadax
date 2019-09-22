@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -9,10 +9,10 @@ namespace MasterMind
 {
     public static class GameHelper
     {
-        public static string ObtainValidatedInput(int maxTurns, int turn)
+        public static string ObtainValidatedInput()
         {
             string input = Console.ReadLine();
-            if (!ValidateInput(input)) { Console.WriteLine("Please provide input in form of 4 numbers only."); input = Console.ReadLine(); };
+            if (!ValidateInput(input)) { Console.WriteLine("ValidationMessage"); input = Console.ReadLine(); };
             return input;
         }
 
