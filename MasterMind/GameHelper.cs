@@ -12,9 +12,14 @@ namespace MasterMind
         public static string ObtainValidatedInput()
         {
             string input = Console.ReadLine();
-            if (!ValidateInput(input)) { Console.WriteLine("ValidationMessage"); input = Console.ReadLine(); };
+            while (!ValidateInput(input))
+            {
+                WriteToConsole("ValidationMessage");
+                input = Console.ReadLine();
+            }
             return input;
         }
+
 
         public static bool CheckForWin(string input, string code)
         {
